@@ -1,5 +1,5 @@
 # n-queens-problem
-Finds all the solutions to the n queens problem.
+Finds all the solutions to the [n queens problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle).
 
 The n queens problem is to find an arrangement of `n` number of queens on a chess board, such that no queen can attack any other queen on the board. Queen pieces can attack in any horizontal, vertical, and diagonal direction.
 
