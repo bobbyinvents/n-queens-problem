@@ -85,9 +85,7 @@ def is_diagonal_to_queen(board_position: list, queen_position: list) -> bool:
     """Checks if a position on the chessboard is diagonal to the queen piece."""
     row, col = board_position
     queen_row, queen_col = queen_position
-    if abs(row - queen_row) == abs(col - queen_col):
-        return True
-    return False
+    return abs(row - queen_row) == abs(col - queen_col)
 
 
 def get_valid_boards(n: int) -> list:
