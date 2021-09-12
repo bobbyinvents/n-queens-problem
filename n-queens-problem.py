@@ -141,7 +141,7 @@ def write_to_output_file(string: str):
         o.write(string)
 
 
-def get_integer(prompt):
+def get_integer(prompt: str) -> int:
     """Prompts the user for an integer number and continues prompting until 
     a valid input is given."""
     while True:
