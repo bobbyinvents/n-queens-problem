@@ -106,7 +106,7 @@ def is_diagonal_to_queen(board_position: list, queen_position: list) -> bool:
 
 def get_valid_boards(n: int) -> list:
     """Sets up the chessboard to start the process of finding valid board configurations."""
-    if n == 0:
+    if n <= 0:
         # no chessboard, so no valid ways
         return []
     else:
@@ -141,6 +141,17 @@ def write_to_output_file(string: str):
         o.write(string)
 
 
+def get_integer(prompt):
+    """Prompts the user for an integer number and continues prompting until 
+    a valid input is given."""
+    while True:
+        user_input = input(prompt)
+        try:
+            return int(user_input)
+        except ValueError:
+            print("You need to provide a valid integer.")
+
+
 if __name__ == "__main__":
     print("THE N QUEENS PUZZLE")
     display_example_board()
@@ -149,7 +160,7 @@ if __name__ == "__main__":
         "This program will solve the puzzle of placing n queens on "
         "an n by n chessboard such that no queens can attack each other!"
     )
-    n = int(input("""Enter an integer n: """))
+    n = get_integer("Enter an integer n: ")
     print("""Getting all distinct solutions...\n""")
 
     write_to_output_file(f"{'='*20}\nSOLUTIONS FOR n={n}\n{'='*20}\n")
